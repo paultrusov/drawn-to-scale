@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drawn to Scale</title>
+<meta name="description" content="Short explanatory videos built from public data. Every frame is drawn by code.">
+<style>
+  :root { --ink:#15171a; --mut:#5c636b; --line:#e3e6ea; --bg:#fff; --card:#f7f8f9; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --ink:#e8eaed; --mut:#9aa2ab; --line:#2a2e34; --bg:#111315; --card:#17191c; } }
+  :root[data-theme="dark"] { --ink:#e8eaed; --mut:#9aa2ab; --line:#2a2e34; --bg:#111315; --card:#17191c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:88px 16px 96px; }
+  h1 { font-size:40px; line-height:1.1; margin:0 0 14px; letter-spacing:-.03em; }
+  .lede { font-size:19px; color:var(--mut); margin:0 0 44px; line-height:1.55; }
+  h2 { font-size:17px; margin:40px 0 10px; letter-spacing:-.01em; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:20px 22px; margin:22px 0; }
+  .card p { margin:0; color:var(--mut); font-size:15px; }
+  ol { padding-left:20px; }
+  li { margin:8px 0; }
+  a { color:inherit; }
+  hr { border:0; border-top:1px solid var(--line); margin:48px 0 24px; }
+  footer { font-size:14px; color:var(--mut); }
+  footer a { margin-right:14px; }
+  @media (max-width:520px) { h1 { font-size:32px; } .wrap { padding-top:56px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Drawn to Scale</h1>
+  <p class="lede">Short explanatory videos built from public data. Every frame is drawn by code
+  from a named source, with no stock footage and no generated imagery.</p>
+
+  <h2>What it is</h2>
+  <p>Drawn to Scale is a small self-hosted program. It reads the day's public news and data feeds,
+  picks one story with a shape worth showing, and builds an animated scene that explains it: a world
+  the camera moves through, narrated, with every figure on screen traceable to the article it came from.</p>
+
+  <div class="card">
+    <p>The video is a drawing, so the caption is the receipt. Every post names its source and links
+    to it, and any number spoken or shown is checked against that source before the video is rendered.</p>
+  </div>
+
+  <h2>How it works</h2>
+  <ol>
+    <li>Public feeds are scored for stories that can actually be shown rather than read out.</li>
+    <li>A scene is written for the chosen story: the objects, the quantities, the narration.</li>
+    <li>The narration is synthesised and measured, and the scene is timed to the real audio.</li>
+    <li>The finished video is uploaded to the project's own TikTok account for review.</li>
+  </ol>
+
+  <h2>The TikTok integration</h2>
+  <p>The app connects to one TikTok account, <strong>@drawntoscaleus</strong>, using TikTok's official
+  Login Kit and Content Posting API. It requests only the ability to confirm which account is connected
+  and to place a finished video into that account's drafts. It reads no audience data and uploads
+  nothing it did not generate itself.</p>
+
+  <hr>
+  <footer>
+    <a href="./terms.html">Terms of Service</a>
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="https://www.tiktok.com/@drawntoscaleus">@drawntoscaleus</a>
+    <p>Independent project, not affiliated with or endorsed by TikTok or ByteDance.</p>
+  </footer>
+</div>
+</body>
+</html>
